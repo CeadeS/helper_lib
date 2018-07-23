@@ -1,3 +1,8 @@
+try:
+    from IPython.core.display import clear_output
+    have_ipython = True
+except ImportError:
+    have_ipython = False
 class ProgressBar:
     def __init__(self, iterations, parent_bar = None):
         self.iterations = iterations
