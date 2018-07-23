@@ -3,8 +3,7 @@ try:
     have_ipython = True
 except ImportError:
     have_ipython = False
-class ProgressBar:
-    import sys
+class ProgressBar:    
     def __init__(self, iterations, parent_bar = None):
         self.iterations = iterations
         self.parent_bar = parent_bar
@@ -18,6 +17,7 @@ class ProgressBar:
             self.animate = self.animate_noipython
 
     def animate_ipython(self, iter, iter_2 = 0):
+        import sys
         try:
             clear_output()
         except Exception:
