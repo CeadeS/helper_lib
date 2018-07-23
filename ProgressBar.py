@@ -1,3 +1,4 @@
+import sys
 try:
     from IPython.core.display import clear_output
     have_ipython = True
